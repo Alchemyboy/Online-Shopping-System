@@ -1,0 +1,37 @@
+// Source code is decompiled from a .class file using FernFlower decompiler.
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.Map;
+import java.util.UUID;
+
+class ShoppingCart {
+   private HashMap<UUID, Product> products = new HashMap();
+
+   public ShoppingCart() {
+   }
+
+   public void addProduct(Product product) {
+      this.products.put(product.getProductID(), product);
+   }
+
+   public void removeProduct(Product product) {
+      this.products.remove(product.getProductID());
+   }
+
+   public int returnSize() {
+      return this.products.size();
+   }
+
+   public double totalCost() {
+      double total = 0.0;
+
+      Product product;
+      for(Iterator var3 = this.products.entrySet().iterator(); var3.hasNext(); total += product.getPrice()) {
+         Map.Entry<UUID, Product> entry = (Map.Entry)var3.next();
+         UUID productId = (UUID)entry.getKey();
+         product = (Product)entry.getValue();
+      }
+
+      return total;
+   }
+}

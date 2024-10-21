@@ -1,0 +1,29 @@
+// Source code is decompiled from a .class file using FernFlower decompiler.
+import java.util.HashMap;
+import java.util.UUID;
+
+class Inventory {
+   private HashMap<UUID, Integer> products = new HashMap();
+
+   public Inventory() {
+   }
+
+   public void addProduct(Product product, int stock) {
+      this.products.put(product.getProductID(), stock);
+   }
+
+   public void updateStock(Product product, int stock) {
+      this.products.replace(product.getProductID(), stock);
+   }
+
+   public boolean inStock(Product product) {
+      int value = (Integer)this.products.get(product.getProductID());
+      return value > 0;
+   }
+
+   public void reStock(Product product, int quantity) {
+      int value = (Integer)this.products.get(product.getProductID());
+      value += quantity;
+      this.products.replace(product.getProductID(), value);
+   }
+}

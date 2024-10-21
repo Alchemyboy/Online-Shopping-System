@@ -1,0 +1,43 @@
+// Source code is decompiled from a .class file using FernFlower decompiler.
+import java.util.HashMap;
+import java.util.UUID;
+
+class Admin {
+   private Inventory inventory;
+   private HashMap<UUID, Product> products = new HashMap();
+   private HashMap<UUID, Integer> stockLevel = new HashMap();
+   private HashMap<UUID, Customer> customers = new HashMap();
+   private HashMap<UUID, Order> orders = new HashMap();
+
+   public Admin() {
+   }
+
+   void addProduct(Product product) {
+      this.products.put(product.getProductID(), product);
+   }
+
+   void updateProduct(Product product) {
+      this.products.put(product.getProductID(), product);
+   }
+
+   public void updateStockLevel(Product product, int stockLevel) {
+      Product p = (Product)this.products.get(product.getProductID());
+      p.setStockLevel(stockLevel);
+   }
+
+   void addOrder(Order order) {
+      this.orders.put(order.getOrderID(), order);
+   }
+
+   void updateOrder(Order orderToUpdate) {
+      this.orders.put(orderToUpdate.getOrderID(), orderToUpdate);
+   }
+
+   void addCustomer(Customer customer) {
+      this.customers.put(customer.getCustomerID(), customer);
+   }
+
+   void updateCustomer(Customer customerToUpdate) {
+      this.customers.put(customerToUpdate.getCustomerID(), customerToUpdate);
+   }
+}

@@ -1,0 +1,75 @@
+// Source code is decompiled from a .class file using FernFlower decompiler.
+import java.util.ArrayList;
+import java.util.UUID;
+
+class Order {
+   private UUID orderID = UUID.randomUUID();
+   private Customer customer;
+   private ArrayList<Product> products = new ArrayList();
+   private double totalCost;
+   private Payment payment;
+   private Shipping shipping;
+
+   public Order(Customer customer, ArrayList<Product> products, double totalCost, Payment payment, Shipping shipping) {
+      this.customer = customer;
+      this.products = products;
+      this.totalCost = totalCost;
+      this.payment = payment;
+      this.shipping = shipping;
+   }
+
+   public UUID getOrderID() {
+      return this.orderID;
+   }
+
+   public Customer getCustomer() {
+      return this.customer;
+   }
+
+   public ArrayList<Product> getProducts() {
+      return this.products;
+   }
+
+   double getTotalCost() {
+      return this.totalCost;
+   }
+
+   public Payment getPayment() {
+      return this.payment;
+   }
+
+   public Shipping getShipping() {
+      return this.shipping;
+   }
+
+   void setCustomer(Customer customer) {
+      this.customer = customer;
+   }
+
+   void setProducts(ArrayList<Product> products) {
+      this.products = products;
+   }
+
+   void setTotalCost(double totalCost) {
+      this.totalCost = totalCost;
+   }
+
+   void setPayment(Payment payment) {
+      this.payment = payment;
+   }
+
+   void setShipping(Shipping shipping) {
+      this.shipping = shipping;
+   }
+
+   public boolean equals(Object obj) {
+      if (this == obj) {
+         return true;
+      } else if (obj != null && this.getClass() == obj.getClass()) {
+         Order order = (Order)obj;
+         return this.orderID.equals(order.orderID);
+      } else {
+         return false;
+      }
+   }
+}

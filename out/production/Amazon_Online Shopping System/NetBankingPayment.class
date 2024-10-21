@@ -1,0 +1,15 @@
+// Source code is decompiled from a .class file using FernFlower decompiler.
+class NetBankingPayment implements PaymentMethod {
+    private String bankName;
+    private String accountNumber;
+ 
+    public NetBankingPayment(String bankName, String accountNumber) {
+       this.bankName = bankName;
+       this.accountNumber = accountNumber;
+    }
+ 
+    public void processPayment(double amount) {
+       System.out.println("Processing net banking payment of $" + amount);
+    }
+}
+ 

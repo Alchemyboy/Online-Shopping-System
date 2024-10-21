@@ -1,0 +1,61 @@
+// Source code is decompiled from a .class file using FernFlower decompiler.
+import java.util.UUID;
+
+class Customer {
+   private UUID customerID;
+   private String name;
+   private String address;
+   private String email;
+
+   public Customer() {
+      this.name = "";
+      this.address = "";
+      this.email = "";
+   }
+
+   public Customer(String name, String address, String email) {
+      this.customerID = UUID.randomUUID();
+      this.name = name;
+      this.address = address;
+      this.email = email;
+   }
+
+   public UUID getCustomerID() {
+      return this.customerID;
+   }
+
+   public String getName() {
+      return this.name;
+   }
+
+   public String getAddress() {
+      return this.address;
+   }
+
+   public String getEmail() {
+      return this.email;
+   }
+
+   public void setName(String name) {
+      this.name = name;
+   }
+
+   public void setAddress(String address) {
+      this.address = address;
+   }
+
+   public void setEmail(String email) {
+      this.email = email;
+   }
+
+   public boolean equals(Object obj) {
+      if (this == obj) {
+         return true;
+      } else if (obj != null && this.getClass() == obj.getClass()) {
+         Customer otherCustomer = (Customer)obj;
+         return this.customerID.equals(otherCustomer.customerID);
+      } else {
+         return false;
+      }
+   }
+}

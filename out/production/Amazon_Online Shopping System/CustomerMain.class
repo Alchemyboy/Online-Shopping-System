@@ -1,0 +1,9 @@
+// Source code is decompiled from a .class file using FernFlower decompiler.
+public class CustomerMain {
+    public CustomerMain() {
+    }
+ 
+    public static void main(String[] args) {
+    }
+}
+ 

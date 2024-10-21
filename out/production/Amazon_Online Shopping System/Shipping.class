@@ -1,0 +1,32 @@
+// Source code is decompiled from a .class file using FernFlower decompiler.
+class Shipping {
+    private String shippingMethod;
+    private double shippingCost;
+ 
+    public Shipping() {
+       this.shippingMethod = "";
+       this.shippingCost = 0.0;
+    }
+ 
+    public Shipping(String shippingMethod, double shippingCost) {
+       this.shippingMethod = shippingMethod;
+       this.shippingCost = shippingCost;
+    }
+ 
+    public String getShippingMethod() {
+       return this.shippingMethod;
+    }
+ 
+    double getShippingCost() {
+       return this.shippingCost;
+    }
+ 
+    void setShippingMethod(String shippingMethod) {
+       this.shippingMethod = shippingMethod;
+    }
+ 
+    void setShippingCost(double shippingCost) {
+       this.shippingCost = shippingCost;
+    }
+}
+ 

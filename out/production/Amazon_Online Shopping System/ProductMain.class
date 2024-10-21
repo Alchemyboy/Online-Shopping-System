@@ -1,0 +1,15 @@
+// Source code is decompiled from a .class file using FernFlower decompiler.
+public class ProductMain {
+    public ProductMain() {
+    }
+ 
+    public static void main(String[] args) {
+       Product p1 = new Product("iPhone", "New iPhone", 999.99, 10);
+       System.out.println(p1.getProductID());
+       Product p2 = new Product("iPhone", "New iPhone", 999.99, 10);
+       System.out.println(p2.getProductID());
+       System.out.println(p1.equals(p2));
+       System.out.println(p2.hashCode());
+    }
+}
+ 

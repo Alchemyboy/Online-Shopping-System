@@ -1,0 +1,18 @@
+// Source code is decompiled from a .class file using FernFlower decompiler.
+public class InventoryMain {
+    public InventoryMain() {
+    }
+ 
+    public static void main(String[] args) {
+       Product p1 = new Product("iPhone", "New iPhone", 100.0, 10);
+       Product p2 = new Product("i2Phone", "New iPhone", 99.0, 10);
+       Product p3 = new Product("i2Phone", "New iPhone", 99.0, 10);
+       Inventory s = new Inventory();
+       s.addProduct(p1, 10);
+       s.addProduct(p2, 10);
+       s.addProduct(p3, 10);
+       s.updateStock(p1, 0);
+       System.out.println(s.inStock(p1));
+    }
+}
+ 

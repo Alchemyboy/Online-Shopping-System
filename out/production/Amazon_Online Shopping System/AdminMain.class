@@ -1,0 +1,11 @@
+// Source code is decompiled from a .class file using FernFlower decompiler.
+public class AdminMain {
+    public AdminMain() {
+    }
+ 
+    public static void main(String[] args) {
+       new Product("iPhone", "New iPhone", 999.99, 10);
+       new Product("iPhone3", "New iPhone", 999.99, 10);
+    }
+}
+ 

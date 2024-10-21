@@ -1,0 +1,39 @@
+// Source code is decompiled from a .class file using FernFlower decompiler.
+import java.util.UUID;
+
+class Payment {
+   private UUID paymentID;
+   private double amount;
+   private String paymentMethod;
+
+   public Payment() {
+   }
+
+   public Payment(double amount, String paymentMethod) {
+      this.amount = amount;
+      this.paymentMethod = paymentMethod;
+   }
+
+   public UUID getPaymentID() {
+      return this.paymentID;
+   }
+
+   public double getAmount() {
+      return this.amount;
+   }
+
+   public String getPaymentMethod() {
+      return this.paymentMethod;
+   }
+
+   public void setAmount(double amount) {
+      this.amount = amount;
+   }
+
+   public void setPaymentMethod(String paymentMethod) {
+      this.paymentMethod = paymentMethod;
+   }
+
+   public void makePayment() {
+   }
+}

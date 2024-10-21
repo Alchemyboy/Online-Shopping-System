@@ -1,0 +1,15 @@
+// Source code is decompiled from a .class file using FernFlower decompiler.
+class CreditCardPayment implements PaymentMethod {
+    private String cardNumber;
+    private String cardHolderName;
+ 
+    public CreditCardPayment(String cardNumber, String cardHolderName) {
+       this.cardNumber = cardNumber;
+       this.cardHolderName = cardHolderName;
+    }
+ 
+    public void processPayment(double amount) {
+       System.out.println("Processing credit card payment of $" + amount);
+    }
+}
+ 
